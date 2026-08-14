@@ -13,18 +13,44 @@
    <header class="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="./img/pudimmelhorado.png" alt="Pudim Cremoso" />
+        <img src="./img/minichefe_pudim.png" alt="Pudim Cremoso" />
         <div class="logo-text">
           Pudim Cremoso
-          <small>By Valter</small>
+          <small>A arte do pudim</small>
         </div>
       </a>
       <nav class="navbar">
         <a href="index.html" class="active">Início</a>
         <a href="história.html">História</a>
-        <a href="curiosidades.html" class="nav-highlight">Curiosidades</a>c
+        <a href="curiosidades.html" >Curiosidades</a>
       </nav>
     </div>
   </header>
+  <section class="hero">
+    <div class="hero-bg" style="background-image: url('./img/pudimzim.png');"></div>
+    <div class="hero-overlay"></div>
+
+   
+    <svg class="hero-kamon" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="150" cy="150" r="148" stroke="white" stroke-width="1"/>
+      <circle cx="150" cy="150" r="110" stroke="white" stroke-width="0.5"/>
+      <circle cx="150" cy="150" r="72"  stroke="white" stroke-width="0.5"/>
+    </svg>
+
+    <div class="hero-content">
+      <span class="hero-kana">século XVI.
+      <h1>UMA SOBREMESA CLÁSSICA<br /><em>Pudim Cremoso</em></h1>
+      <p class="hero-desc">
+        Uma receita simples que atravessou gerações, conquistando pelo sabor suave, textura cremosa e irresistível calda de caramelo.
+      </p>
+
+
+      <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => io.observe(el));
+  </script>
 </body>
 </html>

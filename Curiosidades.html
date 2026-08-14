@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades - Pudim Cremoso</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+   <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="./img/minichefe_pudim.png" alt="Pudim Cremoso" />
+        <div class="logo-text">
+          Pudim Cremoso
+          <small>A arte do pudim</small>
+        </div>
+      </a>
+      <nav class="navbar">
+        <a href="index.html" >Início</a>
+        <a href="história.html">História</a>
+        <a href="curiosidades.html" class="active">Curiosidades</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-bg" style="background-image: url('./img/restaurante.jpg');"></div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <span class="section-label">Você Sabia?</span>
+        <h1>Curiosidades do Pudim</h1>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <span class="section-label reveal">Você Sabia?</span>
+      <h2 class="section-title reveal">Curiosidades que <span>Surpreendem</span></h2>
+      <div class="gold-divider reveal"></div>
+
+      <div class="cards-grid">
+
+        <div class="museum-card reveal">
+          <div class="card-img-wrap">
+            <img src="./img/pudimantigo.jpg" alt="Pudim Antigo" />
+          </div>
+          <div class="card-body">
+            <h3>Uma Sobremesa Antiga</h3>
+            <p>
+                Receitas semelhantes ao pudim existem há séculos,
+              sendo preparadas de diferentes formas em várias partes do mundo.
+            </p>
+          </div>
+        </div>
+
+        <div class="museum-card reveal">
+          <div class="card-img-wrap">
+            <img src="./img/receitapudim.jpg" alt="Receitas" />
+          </div>
+          <div class="card-body">
+            <h3>Receitas que Mudaram</h3>
+            <p>
+               Ao longo do tempo, o pudim ganhou novas versões,
+              ingredientes e formas de preparo, criando diferentes sabores.
+            </p>
+          </div>
+        </div>
+
+        <div class="museum-card reveal">
+          <div class="card-img-wrap">
+            <img src="./img/familiapudim.png" alt="Família" />
+          </div>
+          <div class="card-body">
+            <h3>O Favorito das Famílias</h3>
+            <p>
+               O pudim se tornou uma sobremesa tradicional em muitos
+              almoços de família, festas e comemorações especiais.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="quote-section">
+      <p class="quote-text">
+        "Uma fatia de pudim é pequena, mas a vontade de comer outra é enorme."
+      </p>
+      <span class="quote-author">— Amantes do Pudim</span>
+    </div>
+
+    
+   
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="./img/minichefe_pudim.png" alt="Pudim Cremoso" />
+        </a>
+      </div>
+      <p class="footer-text">
+        Valter Júnio <br />
+        UCB — Universidade Católica de Brasília<br />
+        <span style="color: var(--dourado); font-size: 1.1rem;">XVI</span>
+      </p>
+      <div class="footer-ucb">
+        <a href="https://ucb.catolica.edu.br/" target="_blank" rel="noopener noreferrer">
+          <img src="/img/catolica.webp" alt="Logo UCB" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
